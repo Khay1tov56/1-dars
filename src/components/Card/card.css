@@ -1,0 +1,36 @@
+.card-item {
+    width: 300px;
+   
+}
+
+.cards {
+    border-radius: 0px 0px 10px 10px;
+width: 300px;
+height: auto;
+padding: 15px;
+background-color: white;
+}
+
+.card-img {
+    width: 300px;
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+.card-pop {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.card-title {
+    padding: 24px 0 16px 0;
+}
+
+.card-span {
+    color: rgba(24, 24, 24, 0.515);
+}
+
+ul {
+    padding-left: 0;
+    margin: 0;
+}

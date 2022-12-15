@@ -1,13 +1,4 @@
-import Header from './components/Header/Header'; 
-import Form from './components/Form/Form';
-import Card from './components/Card/Card';
-import { Data } from "./data"
-import Css from './main.css';
-import { useState } from 'react'; 
-
-const App = () => {
-
-  const data = [
+const data = [
     {
       id: 1,
       name: 'Germany',
@@ -73,37 +64,3 @@ const App = () => {
       img: 'https://flagcdn.com/dz.svg',
     },
   ];
-
-  let [value, setValue] = useState ("")
-  function Input (e) {
-     setValue(e.target.value)
-  }
-
-
-
-  // const [dates, setDates] = useState(Data)
-
-    // let fakeData = Array(8).fill(1);
- 
-    return  <>
-    <Header />
-   <Form />
-   <main>
-    <div className="container">
-    <ul className="d-flex flex-wrap justify-content-between">
-        {
-          data.map(item => (<Card img={item.img} population={item.population} region={item.region} capital={item.capital} name={item.name}/>)) 
-        }
-
-      
-        <input type="text" name="text" onChange={Input}/>
-        <h2>{}value</h2>
-       
-        
-    </ul>
-    </div>
-   </main>
-    </>
-  }
-
-  export default App;
