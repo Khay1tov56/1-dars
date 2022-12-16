@@ -28,7 +28,6 @@ const App = () => {
       isError:false,
     })
  
-    console.log(data);
 
   })
   .catch((err) => {
