@@ -10,7 +10,6 @@ const App = () => {
   let [selecvalue, setSelecValue] = useState("")
   let [loading, setLoading] = useState(true)
   let [isError, setIsError] = useState(false)
-  // let [isComplete, setIsComplete] = useState(false)
 
 
   const [data, setData] = useState({
@@ -28,7 +27,7 @@ const App = () => {
       data: data,
       isError:false,
     })
-    // setLoading(false)
+ 
     console.log(data);
 
   })
@@ -44,8 +43,6 @@ const App = () => {
 
   
 
-
-  // const [dates, setDates] = useState(Data)
 
     // let fakeData = Array(8).fill(1);
   
