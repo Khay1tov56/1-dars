@@ -1,14 +1,26 @@
 import "./form.css"
-const Form = () => {
+import { useRef, useState } from "react";
+
+const Form = ({getValue, getSelect}) => {
+    const text = useRef() 
+function Input (e) {
+    e.preventDefault()
+    getValue(text.current.value);
+
+}
+function selectValue(e) {
+    getSelect(e.target.value)
+    console.log(e.target.value);
+}
     return (
         <div className="container">
             <div className="my-5">
-                <form action="https://echo.htmlacademy.ru/" className="d-flex justify-content-between" method="POST" autoComplete="off">
+                <form className="d-flex justify-content-between" onSubmit={Input} autoComplete="off">
                 <label className="form-label w-25">
-                    <input type="search" className="form-control" name="searchinput" placeholder="Search for a country…" />
+                    <input type="search" className="form-control" name="searchinput" ref={text} placeholder="Search for a country…" />
                 </label>
                 <label className="form-label label">
-                <select className="form-select">
+                <select onChange={selectValue} className="form-select">
                  <option hidden>Filter by Region</option>
                  <option value="Africa">Africa</option>
                  <option value="America">America</option>
