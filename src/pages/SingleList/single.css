@@ -1,0 +1,12 @@
+body {
+    background-color: aqua;
+}
+
+.parag {
+    margin-top: 3px;
+    border-bottom: 2px solid red;
+}
+
+.wrap {
+    margin-top: 7% !important;
+}

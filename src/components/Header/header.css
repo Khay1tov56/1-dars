@@ -10,12 +10,12 @@ header {
 
 }
 
-.btn {
+.btns {
     position: relative;
 
 }
 
-.btn::before {
+.btns::before {
     content: "";
     position: absolute;
     background-image: url("../../assets/images/dark.png");
