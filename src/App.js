@@ -3,7 +3,6 @@ import Form from './components/Form/Form';
 import Card from './components/Card/Card';
 import { Home } from './pages/Home/index';
 import { SingleList } from './pages/SingleList';
-// import Css from './main.css';
 import { useState, useEffect } from 'react'; 
 import { Route, Routes } from 'react-router-dom';
 
@@ -42,9 +41,6 @@ const App = () => {
     console.log(err);
   })
   }, [value, selecvalue])
-
-  
-
 
     // let fakeData = Array(8).fill(1);
   

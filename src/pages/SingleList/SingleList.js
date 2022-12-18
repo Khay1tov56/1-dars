@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-// import { Route, Routes } from 'react-router-dom';
 import "./single.css"
 
 
@@ -18,26 +17,8 @@ export const SingleList = () => {
     console.log(posts);
     return (
       <div className='container wrap'>
-        {/* <Routes>
-        <Form getValue={inputValue} getSelect={selectValue}/>
-      <Route path='/' element={<div className="container">
-      {data.isLoading && <h1>Loading...</h1>}
-      {data.isError && <h1>Error...</h1>}
-      {data.data.length !== 0 && (
-    <ul className="d-flex flex-wrap justify-content-between">
-    
-{
-        }
-      
        
-        
-    </ul>
-      )}
-    </div>} />
-    
-    </Routes> */}
-       
-        <button className='btn btn-warning' onClick={() => navigate(-1)}>Back</button>
+        <button className='btn btn-warning' onClick={() => navigate("/")}>Back</button>
 
         {posts.length !== 0 && 
         
