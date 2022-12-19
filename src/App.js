@@ -22,7 +22,14 @@ const App = () => {
 
   useEffect(() => {
     fetch(`https://restcountries.com/v3.1/${value ? `name/${value}`: selecvalue ? `region/${selecvalue}`: "all"}`)
-  .then(response => response.json())
+  .then(response => {
+    if(response.status == 200) {
+      return response.json()
+    }else {
+      alert("Qidiruv natijasi topilmadi")
+      window.location.reload();
+    }
+  })
   .then(data => {
     setData({
       isLoading:false,
