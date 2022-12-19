@@ -1,9 +1,9 @@
 body {
-    background-color: aqua;
+    background-color: rgba(9, 245, 44, 0.553);
 }
 
 .parag {
-    margin-top: 3px;
+    padding-bottom: 10px;
     border-bottom: 2px solid red;
 }
 

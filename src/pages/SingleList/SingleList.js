@@ -8,6 +8,13 @@ export const SingleList = () => {
     const [posts, setPosts] = useState([])
     const { name } = useParams();
     const navigate = useNavigate();
+
+    const [data, setData] = useState({
+      isLoading: true,
+      data: [],
+      isError: false,
+    })
+
     useEffect(() => {
       fetch('https://restcountries.com/v3.1/name/' + name)
     .then(response => response.json())

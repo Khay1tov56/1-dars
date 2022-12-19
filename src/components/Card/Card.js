@@ -2,9 +2,10 @@ import "./card.css";
 // import Germany from "../../assets/images/germany.png"
 // import Data from "../../data"
 import React from "react";
-import { NavLink, Link, useParams } from "react-router-dom"
+import { NavLink, Link, useParams } from "react-router-dom";
 
 const Card = ({img, name, population, region, capital})=> {
+   
     return (
         <>
         <li className="card-item list-unstyled my-4">
