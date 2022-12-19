@@ -34,9 +34,9 @@ export const SingleList = () => {
          <div className="text-wrap text-center">
             <h2>{posts.name.official}</h2>
          <p className='fw-bold parag'>Region: <br />{posts.name.common}</p>
-         <p className='fw-bold parag'>Currency: <br /> `{Object?.keys(posts.currencies).join(", ", " ")}`</p>
-         <p className='fw-bold parag'>Borders: <br />{posts?.borders.join(", ", " ")}</p>
-         <p className='fw-bold parag'>Languages: <br /> `{Object?.values(posts.languages).join(", ", " ")}`</p>
+         <p className='fw-bold parag'>Currency: <br /> `{Object?.keys(posts.currencies)}`</p>
+         <p className='fw-bold parag'>Borders: <br />{posts?.borders + ", "} </p>
+         <p className='fw-bold parag'>Languages: <br /> `{Object?.values(posts.languages).join(", ", " ")} `</p>
          <p className='fw-bold parag'>Subregion: <br />`{posts.subregion}</p>
 
          </div>

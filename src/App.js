@@ -68,7 +68,7 @@ const App = () => {
           data.data.map(item => {
             return <Card
             id={item.id}
-            img={item.flags.svg}
+            img={item.flags.png}
             population={item.population}
             region={item.region}
             capital={item.capital}
