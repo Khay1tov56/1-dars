@@ -1,6 +1,6 @@
 export const lang = {
     en: {
-        header: {
+        hdr: {
             logo:"Where in the world?",
             light: "Light",
             dark: "Dark",
@@ -29,7 +29,7 @@ export const lang = {
 
     },
     uz : {
-        header: {
+        hdr: {
             logo: "Dunyoning qayerida?",
             light: "Kun",
             dark : "Tun"
@@ -58,7 +58,7 @@ export const lang = {
 
     },
     ru : {
-        header : {
+        hdr : {
             logo:" Где в мире?",
              light: "Cвeт",
              dark: "Темнота",
