@@ -1,7 +1,9 @@
 import "./form.css"
 import { useRef, useState } from "react";
+import { lang } from "../../lang/lang"
 
-const Form = ({getValue, getSelect}) => {
+
+const Form = ({getValue, getSelect, setTil, til}) => {
     const text = useRef() 
 function Input (e) {
     e.preventDefault()
@@ -17,11 +19,11 @@ function selectValue(e) {
             <div className="my-5">
                 <form className="d-flex justify-content-between" onSubmit={Input} autoComplete="off">
                 <label className="form-label w-25">
-                    <input type="search" className="form-control" name="searchinput" ref={text} placeholder="Search for a country…" />
+                    <input type="search" className="form-control inp" name="searchinput" ref={text} placeholder={lang[til].form.placeholder} />
                 </label>
                 <label className="form-label label">
                 <select onChange={selectValue} className="form-select">
-                 <option hidden>Filter by Region</option>
+                 <option hidden>{lang[til].form.option} </option>
                  <option value="Africa">Africa</option>
                  <option value="America">America</option>
                  <option value="Asia">Asia</option>

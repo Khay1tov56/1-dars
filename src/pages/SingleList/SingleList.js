@@ -2,9 +2,11 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import "./single.css"
+import { lang } from "../../lang/lang"
 
 
-export const SingleList = () => {
+
+export const SingleList = ({til, setTil}) => {
     const [posts, setPosts] = useState([])
     const { name } = useParams();
     const navigate = useNavigate();
@@ -32,12 +34,12 @@ export const SingleList = () => {
         <div className='d-flex align-items-start justify-content-around'>
          <img src={posts.flags.svg} width="500" height="200" alt="" />
          <div className="text-wrap text-center">
-            <h2>{posts.name.official}</h2>
-         <p className='fw-bold parag'>Region: <br />{posts.name.common}</p>
-         <p className='fw-bold parag'>Currency: <br /> `{Object?.keys(posts.currencies)}`</p>
-         <p className='fw-bold parag'>Borders: <br />{posts?.borders + ", "} </p>
-         <p className='fw-bold parag'>Languages: <br /> `{Object?.values(posts.languages).join(", ", " ")} `</p>
-         <p className='fw-bold parag'>Subregion: <br />`{posts.subregion}</p>
+            <h2 className='off'>{posts.name.official}</h2>
+         <p className='fw-bold parag'>{lang[til].single.region}: <br />{posts.name.common}</p>
+         <p className='fw-bold parag'>{lang[til].single.currency}: <br /> `{Object?.keys(posts.currencies)}`</p>
+         <p className='fw-bold parag'>{lang[til].single.borders}: <br />{posts?.borders + ", "} </p>
+         <p className='fw-bold parag'>{lang[til].single.languages}: <br /> `{Object?.values(posts.languages).join(", ", " ")} `</p>
+         <p className='fw-bold parag'>{lang[til].single.subregion}: <br />`{posts.subregion}</p>
 
          </div>
         </div>

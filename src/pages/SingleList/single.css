@@ -1,5 +1,5 @@
 body {
-    background-color: rgba(231, 233, 231, 0.553);
+    background-color: var(--body-background);
 }
 
 .parag {
@@ -9,4 +9,13 @@ body {
 
 .wrap {
     margin-top: 7% !important;
+}
+
+.off {
+    color: var(--logo-color);
+}
+
+.parag {
+    color: var(--logo-color);
+
 }

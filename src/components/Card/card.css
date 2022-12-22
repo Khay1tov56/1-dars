@@ -8,7 +8,7 @@
 width: 300px;
 height: auto;
 padding: 15px;
-background-color: white;
+background-color: var(--header-background);
 }
 
 .card-img {
@@ -23,14 +23,16 @@ background-color: white;
 .card-pop {
     font-size: 14px;
     font-weight: bold;
+    color: var(--logo-color);
 }
 
 .card-title {
     padding: 24px 0 16px 0;
+    color: var(--logo-color);
 }
 
 .card-span {
-    color: rgba(24, 24, 24, 0.515);
+    color: var(--span-color);
 }
 
 ul {

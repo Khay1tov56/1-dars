@@ -1,11 +1,40 @@
 header {
-    background: #FFFFFF;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--header-background);
 }
 
 .logo {
-    color: black;
+    color: var(--logo-color);
+}
+
+.logo:hover {
+    color: var(--logo-color);
+}
+
+.select {
+    background-color: var(--header-background);
+    color: var(--logo-color);
+}
+
+/* .light .logo  {
+    background-color: #FFFFFF;
+    color: #111517;
+    padding: 20px;
+}
+
+.light .logo:hover {
+    color: #111517;
+}
+
+.darks, .logo {
+    background-color: #2B3844;
+    color: #FFFFFF;
+    padding: 20px;
+}
+
+.darks .logo {
+    color: rgb(255, 255, 255);
     font-size: 24px;
 
 }
@@ -15,18 +44,12 @@ header {
 
 }
 
-.btns::before {
-    content: "";
-    position: absolute;
-    background-image: url("../../assets/images/dark.png");
-    background-size: cover;
-    width: 20px;
-    height: 20px;
-    top: 12px;
-    left: -18px;
-}
-
 .logo:hover {
-    color: black;
+    color: rgb(255, 255, 255);
 
+} */
+
+.select {
+    width: 150px;
 }
+

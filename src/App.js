@@ -5,8 +5,31 @@ import { Home } from './pages/Home/index';
 import { SingleList } from './pages/SingleList';
 import { useState, useEffect } from 'react'; 
 import { Route, Routes } from 'react-router-dom';
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+
+import "./main.css"
+
 
 const App = () => {
+  
+  const [til, setTil ] = useState(localStorage.getItem("en") || til)
+
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light'); 
+
+  useEffect(() => {
+    localStorage.setItem('theme', theme);
+  }, [theme])
+
+  useEffect(() => {
+    localStorage.setItem("en", til)
+  })
+
+  const body = document.querySelector(".body")
+  body.classList.remove(theme === "light" ? "dark":"light" )
+  body.classList.add(theme)
+
+  console.log(theme);
 
   let [value, setValue] = useState("")
   let [selecvalue, setSelecValue] = useState("")
@@ -62,18 +85,18 @@ const App = () => {
   }
 
     return  <>
-    <Header />
+    <Header setTheme={setTheme} setTil={setTil} til={til}/>
    <main>
     <Routes>
       <Route path='/' element={<div className="container">
-      <Form getValue={inputValue} getSelect={selectValue}/>
+      <Form getValue={inputValue} getSelect={selectValue} setTil={setTil} til={til}/>
       {data.isLoading && <h1>Loading...</h1>}
       {data.isError && <h1>Error...</h1>}
       {data.data.length !== 0 && (
     <ul className="d-flex flex-wrap justify-content-between">
 {
           data.data.map(item => {
-            return <Card
+            return <Card til={til}
             id={item.id}
             img={item.flags.png}
             population={item.population}
@@ -89,7 +112,7 @@ const App = () => {
     </ul>
       )}
     </div>} />
-    <Route path='/country/:name' element={<SingleList />}/>
+    <Route path='/country/:name' element={<SingleList til={til} setTil={setTil}/>}/>
     <Route path='*' element={<Home />}/>
     </Routes>
    </main>
