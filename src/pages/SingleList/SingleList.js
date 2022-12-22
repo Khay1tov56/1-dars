@@ -27,7 +27,7 @@ export const SingleList = ({til, setTil}) => {
     return (
       <div className='container wrap'>
        
-        <button className='btn btn-warning' onClick={() => navigate("/")}>Back</button>
+        <button className='btn btn-warning' onClick={() => navigate("/")}>{lang[til].back.base}</button>
 
         {posts.length !== 0 && 
         

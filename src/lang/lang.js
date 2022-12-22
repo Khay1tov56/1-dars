@@ -23,6 +23,9 @@ export const lang = {
             languages : "Languages",
             subregion : "Subregion",
         },
+        back : {
+            base : "Back",
+        },
 
     },
     uz : {
@@ -49,6 +52,9 @@ export const lang = {
             languages : "Tillar",
             subregion : "Submintaqa",
         },
+        back : {
+            base : "Orqaga",
+        },
 
     },
     ru : {
@@ -73,6 +79,9 @@ export const lang = {
             borders : "Ограничения",
             languages : "Языки",
             subregion : "Субрегион",
+        },
+        back : {
+            base : "Назад",
         },
     }
 }
