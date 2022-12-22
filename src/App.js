@@ -5,8 +5,7 @@ import { Home } from './pages/Home/index';
 import { SingleList } from './pages/SingleList';
 import { useState, useEffect } from 'react'; 
 import { Route, Routes } from 'react-router-dom';
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
+
 
 import "./main.css"
 
@@ -101,7 +100,8 @@ const App = () => {
             population={item.population}
             region={item.region}
             capital={item.capital}
-            name={item.name.common}/>
+            name={item.name.common}
+            />
             
           }) 
         }

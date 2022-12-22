@@ -15,12 +15,12 @@ const Header = ({setTheme, setTil, til}) => {
       </h1> 
       <div className="select-wrap d-flex">
 
-<select class="form-select select" aria-label="Default select example" onChange={(e) => setTheme(e.target.value)}>
+<select className="form-select select" aria-label="Default select example" onChange={(e) => setTheme(e.target.value)}>
   <option value="light" selected>{lang[til].header.light}</option>
   <option value="dark">{lang[til].header.dark}</option>
 </select>
 
-     <select defaultValue={til} class="form-select select  me-5" aria-label="Default select example" onChange={(evt) => setTil(evt.target.value)}>
+     <select defaultValue={til} className="form-select select  me-5" aria-label="Default select example" onChange={(evt) => setTil(evt.target.value)}>
   <option value="en">En</option>
   <option value="uz">Uz</option>
   <option value="ru">Ru</option>
