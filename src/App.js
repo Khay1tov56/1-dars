@@ -29,7 +29,6 @@ const App = () => {
   body.classList.remove(theme === "light" ? "dark":"light" )
   body.classList.add(theme)
 
-  console.log(theme);
 
   let [value, setValue] = useState("")
   let [selecvalue, setSelecValue] = useState("")

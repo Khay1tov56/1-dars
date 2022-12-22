@@ -8,8 +8,6 @@ import { lang } from "../../lang/lang"
 
 const Card = ({img, name, population, region, capital, til})=> {
 
-    console.log(til);
-   
     return (
         <>
         <li className="card-item list-unstyled my-4">

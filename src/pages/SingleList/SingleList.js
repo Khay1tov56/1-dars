@@ -23,7 +23,6 @@ export const SingleList = ({til, setTil}) => {
     .then(json => setPosts(json[0]))
     }, [name]);
 
-    console.log(posts);
     return (
       <div className='container wrap'>
        
